@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-9">
+        <div class="container">
+            <@ var count = 0; @>
+            <@ for(var i = 0; i < Math.sqrt(grid); i++ ) { @>
+            <div class="row" style="margin-bottom:5px;">
+                <@ for(var j = 0; j < Math.sqrt(grid); j++ ) { @>
+                <div class="col-md-{{Math.sqrt(grid)}}">
+                    <img class="img-thumbnail tile-image" data-id="{{tiles.at(count).cid}}" src="{{tiles.at(count).get('image').src}}" />
+                    <@ count++; @>
+                </div>
+                <@ } @>
+            </div>
+            <@ } @>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="alert alert-info">
+            <h2 class="tile-timer">{{timer}}</h2>
+            <button type="button" class="btn btn-default btn-lg btn-restart">Restart</button>
+        </div>
+    </div>
+</div>
+
+

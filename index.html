@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Space Apps Toronto - Where on Earth</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+  </head>
+  <body>
+  <div class="jumbotron">
+      <h1>Where on Earth Game</h1>
+      <p>Space Apps Toronto 2014</p>
+  </div>
+    <div id="view-game"></div>
+
+    <script>
+
+        var require = {
+            baseUrl: '/js/',
+            deps: [
+                "jquery",
+                "underscore",
+                "backbone",
+                "app",
+                "bootstrap",
+                "text"
+            ],
+            paths:{
+                jquery: "lib/jquery",
+                underscore: "lib/underscore",
+                backbone: 'lib/backbone-min',
+                text: 'lib/require-text',
+                bootstrap: 'lib/bootstrap',
+                app: 'app'
+            },
+            callback: function($,_,Backbone, app) {
+               app.start();
+            }
+        };
+    </script>
+
+    <script src="js/require.js"></script>
+
+  </body>
+</html>
